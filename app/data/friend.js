@@ -2,9 +2,9 @@
 
 var friendArray = [
   {
-    name: "Kirk",
-    photo: "kirk@email.com",
-    score: [
+    name: "Eddie Peng",
+    photo: "http://attach.setn.com/newsimages/2015/08/05/313109-XXL.jpg",
+    scores: [
     	 5,
 		 1,
 		 4,
@@ -18,14 +18,14 @@ var friendArray = [
     ]
   },
   {
-    name: "Dirk",
-    photo: "dirk@email.com",
-    score: [
+    name: "Sunny",
+    photo: "https://images-na.ssl-images-amazon.com/images/M/MV5BMTYwOTUyMjU2Nl5BMl5BanBnXkFtZTgwMzYxMjA0NzE@._V1_.jpg",
+    scores: [
     	 5,
 		 1,
 		 4,
-		 4,
-		 5,
+		 1,
+		 1,
 		 1,
 		 2,
 		 5,
@@ -34,61 +34,22 @@ var friendArray = [
     ],
   },
   {
-    name: "Lisa",
-    photo: "lisa@email.com",
-    score: [
+    name: "Jyn",
+    photo: "https://s-media-cache-ak0.pinimg.com/originals/21/89/53/218953a945289be9312e457dad921bf8.png",
+    scores: [
     	 1,
-		 2,
-		 3,
-		 4,
 		 1,
-		 5,
 		 1,
-		 4,
-		 2,
-		 3
+		 1,
+		 1,
+		 1,
+		 1,
+		 1,
+		 1,
+		 1
     ],
   },
 ];
-
-var sum = 0;  
-
-var scoreTotal = [];
-
-for (var i = 0; i < friendArray.length; i++) {
-
-	friendArray[i].score.forEach(
-		function addNumber(value) { sum += value; }
-	);
-	console.log("Index", i, "Total", sum)
-	scoreTotal.push(sum);
-};
-
-console.log(scoreTotal);
-
-scoreTotal = [ 32, 64, 90 ]
-
-//Compare the difference between each value within the array
-
-var index0_1 = Math.abs(scoreTotal[0] - scoreTotal[1]);
-console.log("0-1", index0_1);
-
-var index0_2 = Math.abs(scoreTotal[0] - scoreTotal[2]);
-console.log("0-2", index0_2);
-
-
-if (index0_1 < index0_2) {
-	console.log(friendArray[1].name)
-} else {
-	console.log(friendArray[2].name)
-}
-
-
-
-
-
-
-
 
 
 module.exports = friendArray;
