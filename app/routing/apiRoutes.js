@@ -8,10 +8,24 @@ module.exports = function(app) {
   });
 
   app.post("/api/friends", function(req, res) {
-      
-      //Where can i see this console log?
-      console.log(req.body)
+
+      console.log("route", req.body)
 
       friendData.push(req.body);
+      // friendArray.push(req.body);
+
+      var sum = 0;
+
+      // console.log("score", req.body.scores)
+
+
+      req.body.scores.forEach( 
+        function addNumber(value) { sum += parseInt(value); }
+      );
+      console.log(sum)
+
+      
+
+
   });
 };
